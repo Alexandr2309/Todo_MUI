@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -9,7 +9,6 @@ import CheckIcon from '@mui/icons-material/Check';
 import { styled } from '@mui/material/styles';
 import { Transition } from 'react-transition-group';
 import { transStylesCheck, closeIconStyles, transStylesText, paperStyle } from '../jsStyles/TaskItemStyles';
-import TextField from '@mui/material/TextField';
 
 const TaskItem = (todo, setTodos, allTodos, id) => {
   const { text, performed } = todo;
@@ -68,7 +67,7 @@ const TaskItem = (todo, setTodos, allTodos, id) => {
           </Transition>
           <ListItemIcon sx={{ display: 'inline-flex', '& *': { cursor: 'pointer' } }}
             onClick={e => changeTodos(id, 'delete')}
-            data-testid="btnDelete" 
+            data-testid="btnDelete"
           >
             <CloseOutlinedIcon sx={{ ...closeIconStyles }} fontSize="large" />
           </ListItemIcon>

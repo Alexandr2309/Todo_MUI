@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import React, { useState } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
@@ -40,7 +40,7 @@ const BottomPanel = ({ todos, setTodos, setStatus }) => {
   return (
     <Paper elevation={3}>
       <Grid sx={{ p: '5px 5px', display: 'flex', alignItems: 'center' }}>
-        <Grid item xs={2} sx={{fontSize: '18px', pl: '7px'}}>
+        <Grid item xs={2} sx={{ fontSize: '18px', pl: '7px' }}>
           {caseWord(todos.filter(todo => !todo.performed).length)}
         </Grid>
         <Grid item xs={8} sx={{ flexGrow: 1, textAlign: 'center' }}>
